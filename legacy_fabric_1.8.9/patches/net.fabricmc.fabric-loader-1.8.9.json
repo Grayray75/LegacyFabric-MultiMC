@@ -56,7 +56,7 @@
     ],
     "mainClass": "net.fabricmc.loader.launch.knot.KnotClient",
     "name": "Legacy Fabric Loader",
-    "releaseTime": "2020-06-12+21:17:20",
+    "releaseTime": "2021-02-22+06:48:00",
     "requires": [
         {
             "equals": "1.8.9",
