@@ -1,0 +1,72 @@
+{
+    "formatVersion": 1,
+    "+libraries": [
+        {
+            "name": "net.fabricmc:tiny-mappings-parser:0.2.2.14",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "net.fabricmc:sponge-mixin:0.9.4+mixin.0.8.2",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "net.fabricmc:tiny-remapper:0.4.2",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "net.fabricmc:access-widener:1.0.0",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "net.fabricmc:fabric-loader-sat4j:2.3.5.4",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "com.google.jimfs:jimfs:1.2-fabric",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "org.ow2.asm:asm:9.1",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "org.ow2.asm:asm-analysis:9.1",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "org.ow2.asm:asm-commons:9.1",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "org.ow2.asm:asm-tree:9.1",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "org.ow2.asm:asm-util:9.1",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "com.google.guava:guava:21.0",
+            "url": "https://maven.fabricmc.net/"
+        },
+        {
+            "name": "net.fabricmc:intermediary:1.13.2",
+            "url": "https://maven.legacyfabric.net/"
+        },
+        {
+            "name": "net.fabricmc:fabric-loader:0.11.6",
+            "url": "https://maven.fabricmc.net/"
+        }
+    ],
+    "mainClass": "net.fabricmc.loader.launch.knot.KnotClient",
+    "name": "Legacy Fabric Loader",
+    "releaseTime": "2021-06-14T03:32:50+00:00",
+    "requires": [
+        {
+            "equals": "1.13.2",
+            "uid": "net.minecraft"
+        }
+    ],
+    "uid": "net.fabricmc.fabric-loader-1.13.2",
+    "version": "0.11.6"
+}
