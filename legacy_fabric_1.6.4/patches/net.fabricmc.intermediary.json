@@ -4,6 +4,14 @@
         {
             "name": "net.fabricmc:intermediary:1.6.4",
             "url": "https://maven.legacyfabric.net/"
+        },
+        {
+            "name": "org.apache.logging.log4j:log4j-api:2.8.1",
+            "url": "https://libraries.minecraft.net"
+        },
+        {
+            "name": "org.apache.logging.log4j:log4j-core:2.8.1",
+            "url": "https://libraries.minecraft.net"
         }
     ],
     "name": "Intermediary Mappings",
