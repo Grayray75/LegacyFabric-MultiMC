@@ -1,0 +1,12 @@
+{
+    "formatVersion": 1,
+    "+libraries": [
+        {
+            "name": "net.fabricmc:intermediary:1.10.2",
+            "url": "https://maven.legacyfabric.net/"
+        }
+    ],
+    "name": "Intermediary Mappings",
+    "uid": "net.fabricmc.intermediary",
+    "version": "1.10.2"
+}
