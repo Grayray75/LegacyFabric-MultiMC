@@ -2,6 +2,8 @@
 
 This repository contains the necessary files to import a Legacy-Fabric instance into MultiMC.
 
+If you have any problems, please open a new [issue](https://github.com/Grayray75/LegacyFabric-MultiMC/issues) or contact me at the [Legacy-Fabric Discord](https://legacyfabric.net/discord).
+
 ### Install Guide:
 1. Download the zip for the MC version you want from below.
 2. Drag the zip into MutliMC and click 'OK'.
