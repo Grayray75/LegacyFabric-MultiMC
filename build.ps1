@@ -2,18 +2,19 @@
 # and creates the corresponding zip files in "dist".
 # In order for this script to run, 7zip must be added to the system path.
 
-$outputFolder = "dist"
-$mainFolder = [IO.Directory]::GetCurrentDirectory()
+$rootDir = [IO.Directory]::GetCurrentDirectory()
+$inputDir = [IO.Path]::Combine($rootDir, "src")
+$outputDir = [IO.Path]::Combine($rootDir, "dist")
 
-$dirs = [IO.Directory]::GetDirectories($mainFolder, "legacy_fabric_*")
+$dirs = [IO.Directory]::GetDirectories($inputDir, "legacy_fabric_*")
 foreach ($dir in $dirs) {
     Write-Output "" "-------------------------------------------------------------------------"
     Set-Location $dir
 
     $dirName = [IO.Path]::GetFileName($dir)
-    $zipPath = [IO.Path]::Combine($mainFolder, $outputFolder, ($dirName + ".zip"))
+    $zipPath = [IO.Path]::Combine($inputDir, $outputDir, ($dirName + ".zip"))
     7z a -tzip $zipPath *
-    Set-Location ..
 }
 
+Set-Location $rootDir
 Write-Output "" "Finished"
