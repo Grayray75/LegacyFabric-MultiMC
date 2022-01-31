@@ -34,16 +34,15 @@
             "version": "1.4.7"
         },
         {
-            "cachedName": "Fabric Loader",
+            "cachedName": "Cursed Fabric Loader 1.0.0 (Required)",
             "cachedRequires": [
                 {
                     "equals": "1.4.7",
-                    "uid": "net.fabricmc.intermediary"
+                    "uid": "net.minecraft"
                 }
             ],
-            "cachedVersion": "0.12.12",
-            "uid": "net.fabricmc.fabric-loader",
-            "version": "0.12.12"
+            "cachedVersion": "1.0.0-b1.7.3",
+            "uid": "net.fabricmc.cursed-fabric-loader"
         }
     ],
     "formatVersion": 1
