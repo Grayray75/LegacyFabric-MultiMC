@@ -4,14 +4,6 @@
         {
             "name": "net.fabricmc:intermediary:1.6.4",
             "url": "https://maven.legacyfabric.net/"
-        },
-        {
-            "name": "org.apache.logging.log4j:log4j-api:2.17.0",
-            "url": "https://repo1.maven.org/maven2/"
-        },
-        {
-            "name": "org.apache.logging.log4j:log4j-core:2.17.0",
-            "url": "https://repo1.maven.org/maven2/"
         }
     ],
     "name": "Intermediary Mappings",
