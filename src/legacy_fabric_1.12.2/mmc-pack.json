@@ -12,6 +12,7 @@
             "cachedName": "Minecraft",
             "cachedRequires": [
                 {
+                    "equals": "2.9.4-nightly-20150209",
                     "suggests": "2.9.4-nightly-20150209",
                     "uid": "org.lwjgl"
                 }
@@ -30,6 +31,8 @@
                 }
             ],
             "cachedVersion": "1.12.2",
+            "cachedVolatile": true,
+            "dependencyOnly": true,
             "uid": "net.fabricmc.intermediary",
             "version": "1.12.2"
         },

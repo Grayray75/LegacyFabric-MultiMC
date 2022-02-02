@@ -1,52 +1,52 @@
 {
     "components": [
         {
-            "cachedName": "LWJGL 2",
-            "cachedVersion": "2.9.4-nightly-20150209",
+            "cachedName": "{lwjgl_cachedName}",
+            "cachedVersion": "{lwjgl_version}",
             "cachedVolatile": true,
             "dependencyOnly": true,
-            "uid": "org.lwjgl",
-            "version": "2.9.4-nightly-20150209"
+            "uid": "{lwjgl_uid}",
+            "version": "{lwjgl_version}"
         },
         {
             "cachedName": "Minecraft",
             "cachedRequires": [
                 {
-                    "equals": "2.9.4-nightly-20150209",
-                    "suggests": "2.9.4-nightly-20150209",
-                    "uid": "org.lwjgl"
+                    "equals": "{lwjgl_version}",
+                    "suggests": "{lwjgl_version}",
+                    "uid": "{lwjgl_uid}"
                 }
             ],
-            "cachedVersion": "1.4.7",
+            "cachedVersion": "{mc_version}",
             "important": true,
             "uid": "net.minecraft",
-            "version": "1.4.7"
+            "version": "{mc_version}"
         },
         {
             "cachedName": "Intermediary Mappings",
             "cachedRequires": [
                 {
-                    "equals": "1.4.7",
+                    "equals": "{mc_version}",
                     "uid": "net.minecraft"
                 }
             ],
-            "cachedVersion": "1.4.7",
+            "cachedVersion": "{mc_version}",
             "cachedVolatile": true,
             "dependencyOnly": true,
             "uid": "net.fabricmc.intermediary",
-            "version": "1.4.7"
+            "version": "{mc_version}"
         },
         {
             "cachedName": "Fabric Loader",
             "cachedRequires": [
                 {
-                    "equals": "1.4.7",
+                    "equals": "{mc_version}",
                     "uid": "net.fabricmc.intermediary"
                 }
             ],
-            "cachedVersion": "0.13.0",
+            "cachedVersion": "{loader_version}",
             "uid": "net.fabricmc.fabric-loader",
-            "version": "0.13.0"
+            "version": "{loader_version}"
         }
     ],
     "formatVersion": 1

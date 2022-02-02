@@ -31,6 +31,8 @@
                 }
             ],
             "cachedVersion": "1.13.2",
+            "cachedVolatile": true,
+            "dependencyOnly": true,
             "uid": "net.fabricmc.intermediary",
             "version": "1.13.2"
         },

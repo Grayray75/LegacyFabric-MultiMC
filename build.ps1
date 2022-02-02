@@ -1,20 +1,69 @@
-# This script compresses the contents of the directories "legacy_fabric_*" 
-# and creates the corresponding zip files in "dist".
+# This script generates the instances and creates the zip files in "dist".
 # In order for this script to run, 7zip must be added to the system path.
 
-$rootDir = [IO.Directory]::GetCurrentDirectory()
-$inputDir = [IO.Path]::Combine($rootDir, "src")
-$outputDir = [IO.Path]::Combine($rootDir, "dist")
+$rootDir = $PWD
+$inputDir = Join-Path $rootDir "src"
+$outputDir = Join-Path $rootDir "dist"
+$baseInstanceDir = Join-Path $inputDir "lf_instance_base"
+$baseInstanceFiles = Get-ChildItem $baseInstanceDir -Recurse | Where-Object { ! $_.PSIsContainer }
 
-$dirs = [IO.Directory]::GetDirectories($inputDir, "legacy_fabric_*")
-foreach ($dir in $dirs) {
+function GenerateVersion($mc_version, $loader_version, $lwjgl_cachedName, $lwjgl_uid, $lwjgl_version) {
+    $instanceOutDir = Join-Path $inputDir ("legacy_fabric_" + $mc_version)
+    foreach ($inputFile in $baseInstanceFiles) {
+
+        # get relativ filepath and create directories
+        Set-Location $baseInstanceDir
+        $relativeFilePath = Get-Item $inputFile.FullName | Resolve-Path -Relative
+        $outputFile = Join-Path $instanceOutDir $relativeFilePath
+        [Collections.ArrayList]$directories = $outputFile.Split([IO.Path]::DirectorySeparatorChar)
+        $directories.RemoveAt($directories.Count - 1)
+        $directory = $directories -join [IO.Path]::DirectorySeparatorChar
+        New-Item -ItemType Directory -Force -Path $directory
+
+        # insert values in text files and copy other files
+        if ($inputFile.Name.EndsWith(".cfg") -or $inputFile.Name.EndsWith(".json")) {
+            $content = Get-Content -Path $inputFile.FullName
+
+            for ($i = 0; $i -lt $content.Count; $i++) {
+                $content[$i] = $content[$i] -replace "{mc_version}", $mc_version
+                $content[$i] = $content[$i] -replace "{loader_version}", $loader_version
+                $content[$i] = $content[$i] -replace "{lwjgl_cachedName}", $lwjgl_cachedName
+                $content[$i] = $content[$i] -replace "{lwjgl_uid}", $lwjgl_uid
+                $content[$i] = $content[$i] -replace "{lwjgl_version}", $lwjgl_version
+            }
+    
+            Set-Content -Path $outputFile -Value $content
+        }
+        else {
+            Copy-Item -Path $inputFile -Destination $outputFile -Force
+        }
+    }
+}
+
+# to update the loader just change this line and run the script
+$loaderVersion = "0.13.0"
+
+GenerateVersion -mc_version "1.13.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 3" -lwjgl_uid "org.lwjgl3" -lwjgl_version "3.1.6"
+GenerateVersion -mc_version "1.12.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+GenerateVersion -mc_version "1.11.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+GenerateVersion -mc_version "1.10.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+GenerateVersion -mc_version "1.9.4" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+GenerateVersion -mc_version "1.8.9" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+GenerateVersion -mc_version "1.7.10" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+GenerateVersion -mc_version "1.6.4" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+GenerateVersion -mc_version "1.5.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+GenerateVersion -mc_version "1.4.7" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+GenerateVersion -mc_version "1.3.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+
+# create instance zips
+$instanceDirs = Get-ChildItem $inputDir "legacy_fabric_*"
+foreach ($dir in $instanceDirs) {
     Write-Output "" "-------------------------------------------------------------------------"
-    Set-Location $dir
+    Set-Location $dir.FullName
 
-    $dirName = [IO.Path]::GetFileName($dir)
-    $zipPath = [IO.Path]::Combine($inputDir, $outputDir, ($dirName + ".zip"))
+    $zipPath = Join-Path $outputDir ($dir.Name + ".zip")
     7z a -tzip $zipPath *
 }
 
 Set-Location $rootDir
-Write-Output "" "Finished"
+Write-Output "" "Finished creating instances!"
