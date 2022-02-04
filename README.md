@@ -20,8 +20,6 @@ If you have any problems, please open a new [issue](https://github.com/Grayray75
 -   [1.8.9 zip](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.8.9.zip) (includes latest LegacyFabric-API)
 -   [1.7.10 zip](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.7.10.zip)
 -   [1.6.4 zip](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.6.4.zip)
--   [1.5.2 zip](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.5.2.zip) \*
--   [1.4.7 zip](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.4.7.zip) \*
--   [1.3.2 zip](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.3.2.zip) \*
-
-##### \* Versions 1.5.2 and below are currently broken!
+-   [1.5.2 zip](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.5.2.zip)
+-   [1.4.7 zip](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.4.7.zip)
+-   [1.3.2 zip](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.3.2.zip)

@@ -6,6 +6,9 @@
             "url": "https://maven.legacyfabric.net/"
         }
     ],
+    "+traits": [
+        "noapplet"
+    ],
     "name": "Intermediary Mappings",
     "uid": "net.fabricmc.intermediary",
     "version": "1.4.7"
