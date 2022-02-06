@@ -44,7 +44,7 @@ function GenerateVersion($mc_version, $loader_version, $lwjgl_cachedName, $lwjgl
 }
 
 # to update the loader just change this line and run the script
-$loaderVersion = "0.13.0"
+$loaderVersion = "0.13.1"
 
 GenerateVersion -mc_version "1.13.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 3" -lwjgl_uid "org.lwjgl3" -lwjgl_version "3.1.6"
 GenerateVersion -mc_version "1.12.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
