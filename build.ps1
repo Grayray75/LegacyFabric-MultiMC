@@ -52,6 +52,7 @@ GenerateVersion -mc_version "1.11.2" -loader_version $loaderVersion -lwjgl_cache
 GenerateVersion -mc_version "1.10.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
 GenerateVersion -mc_version "1.9.4" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
 GenerateVersion -mc_version "1.8.9" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
+GenerateVersion -mc_version "1.8" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
 GenerateVersion -mc_version "1.7.10" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
 GenerateVersion -mc_version "1.6.4" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
 GenerateVersion -mc_version "1.5.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209" -ignorePatchs
