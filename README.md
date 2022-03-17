@@ -2,7 +2,7 @@
 
 This repository contains the necessary files to import a Legacy-Fabric instance into MultiMC.
 
-If you have any problems, please open a new [issue](https://github.com/Grayray75/LegacyFabric-MultiMC/issues) or contact me at the [Legacy-Fabric Discord](https://legacyfabric.net/discord).
+If you have any problems, please open a new [issue](https://github.com/Grayray75/LegacyFabric-MultiMC/issues) or ask at the [Legacy-Fabric Discord](https://legacyfabric.net/discord).
 
 ### Install Guide:
 
@@ -12,9 +12,8 @@ If you have any problems, please open a new [issue](https://github.com/Grayray75
 
 ### Download:
 
-##### Stable: Uses fabric-loader v0.12.12
-
-##### Latest: Uses fabric-loader v0.13.2, which doesn't work in some versions
+Stable: Uses fabric-loader v0.12.12\
+Latest: Uses fabric-loader v0.13.3, which doesn't work in some versions
 
 | Stable (Recommended)                                                                                 | Latest                                                                                             |                                  |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------- |

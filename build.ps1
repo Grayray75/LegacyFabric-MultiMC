@@ -7,7 +7,7 @@ $outputDir = Join-Path $rootDir "dist"
 $baseInstanceDir = Join-Path $inputDir "lf_instance_base"
 $baseInstanceFiles = Get-ChildItem $baseInstanceDir -Recurse | Where-Object { ! $_.PSIsContainer }
 
-function GenerateVersion($mc_version, $loader_version, $lwjgl_cachedName, $lwjgl_uid, $lwjgl_version, [switch]$ignorePatchs = $false) {
+function GenerateVersion($mc_version, $loader_version, $lwjgl_cachedName, $lwjgl_uid, $lwjgl_version, [switch]$ignorePatches = $false) {
     $instanceOutDir = Join-Path $inputDir ("legacy_fabric_" + $mc_version)
     foreach ($inputFile in $baseInstanceFiles) {
 
@@ -17,7 +17,7 @@ function GenerateVersion($mc_version, $loader_version, $lwjgl_cachedName, $lwjgl
         $outputFile = Join-Path $instanceOutDir $relativeFilePath
         [Collections.ArrayList]$directories = $outputFile.Split([IO.Path]::DirectorySeparatorChar)
         $directories.RemoveAt($directories.Count - 1)
-        if ($ignorePatchs -eq $true -and $directories[$directories.Count - 1] -eq "patches") {
+        if ($ignorePatches -eq $true -and $directories[$directories.Count - 1] -eq "patches") {
             continue
         }
         $directory = $directories -join [IO.Path]::DirectorySeparatorChar
@@ -44,7 +44,7 @@ function GenerateVersion($mc_version, $loader_version, $lwjgl_cachedName, $lwjgl
 }
 
 # to update the loader just change this line and run the script
-$loaderVersion = "0.13.2"
+$loaderVersion = "0.13.3"
 
 GenerateVersion -mc_version "1.13.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 3" -lwjgl_uid "org.lwjgl3" -lwjgl_version "3.1.6"
 GenerateVersion -mc_version "1.12.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
@@ -55,9 +55,9 @@ GenerateVersion -mc_version "1.8.9" -loader_version $loaderVersion -lwjgl_cached
 GenerateVersion -mc_version "1.8" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
 GenerateVersion -mc_version "1.7.10" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
 GenerateVersion -mc_version "1.6.4" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209"
-GenerateVersion -mc_version "1.5.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209" -ignorePatchs
-GenerateVersion -mc_version "1.4.7" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209" -ignorePatchs
-GenerateVersion -mc_version "1.3.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209" -ignorePatchs
+GenerateVersion -mc_version "1.5.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209" -ignorePatches
+GenerateVersion -mc_version "1.4.7" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209" -ignorePatches
+GenerateVersion -mc_version "1.3.2" -loader_version $loaderVersion -lwjgl_cachedName "LWJGL 2" -lwjgl_uid "org.lwjgl" -lwjgl_version "2.9.4-nightly-20150209" -ignorePatches
 
 # create instance zips
 $instanceDirs = Get-ChildItem $inputDir "legacy_fabric_*"
