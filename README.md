@@ -13,9 +13,9 @@ If you have any problems, please open a new [issue](https://github.com/Grayray75
 ### Download:
 
 Stable: Uses fabric-loader v0.12.12\
-Latest: Uses fabric-loader v0.14.8, which doesn't work in some versions
+Latest: Uses fabric-loader v0.14.8, which doesn't work in some situations
 
-| Stable (Recommended)                                                                                 | Latest                                                                                             |                                  |
+| Stable                                                                                               | Latest                                                                                             |                                  |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------- |
 | [1.13.2](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/stable/dist/legacy_fabric_1.13.2.zip) | [1.13.2](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.13.2.zip) |
 | [1.12.2](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/stable/dist/legacy_fabric_1.12.2.zip) | [1.12.2](https://github.com/Grayray75/LegacyFabric-MultiMC/raw/main/dist/legacy_fabric_1.12.2.zip) |
