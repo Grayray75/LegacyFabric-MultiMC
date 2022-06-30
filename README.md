@@ -13,7 +13,7 @@ If you have any problems, please open a new [issue](https://github.com/Grayray75
 ### Download:
 
 Stable: Uses fabric-loader v0.12.12\
-Latest: Uses fabric-loader v0.13.3, which doesn't work in some versions
+Latest: Uses fabric-loader v0.14.8, which doesn't work in some versions
 
 | Stable (Recommended)                                                                                 | Latest                                                                                             |                                  |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------- |
