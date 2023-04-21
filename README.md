@@ -2,7 +2,6 @@
 
 **⚠️ This repo is outdated, use the new one at [Legacy-Fabric/multimc-instance-creator](https://github.com/Legacy-Fabric/multimc-instance-creator) instead.**
 
-<br>
 
 This repository contains the necessary files to import a Legacy-Fabric instance into MultiMC.
 
@@ -15,6 +14,8 @@ If you have any problems, please open a new [issue](https://github.com/Grayray75
 3. Press 'Launch' and enjoy the game :)
 
 ### Download:
+
+**⚠️ This repo is outdated, use the new one at [Legacy-Fabric/multimc-instance-creator](https://github.com/Legacy-Fabric/multimc-instance-creator) instead.**
 
 Stable: Uses fabric-loader v0.12.12\
 Latest: Uses fabric-loader v0.14.8, which doesn't work in some situations
