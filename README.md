@@ -1,5 +1,9 @@
 # LegacyFabric-MultiMC
 
+**⚠️ This repo is outdated, use the new one at [Legacy-Fabric/multimc-instance-creator](https://github.com/Legacy-Fabric/multimc-instance-creator) instead.**
+
+<br>
+
 This repository contains the necessary files to import a Legacy-Fabric instance into MultiMC.
 
 If you have any problems, please open a new [issue](https://github.com/Grayray75/LegacyFabric-MultiMC/issues) or ask at the [Legacy-Fabric Discord](https://legacyfabric.net/discord).
@@ -7,7 +11,7 @@ If you have any problems, please open a new [issue](https://github.com/Grayray75
 ### Install Guide:
 
 1. Download the zip for the MC version you want from below.
-2. Drag the zip into MutliMC and click 'OK'.
+2. Drag the zip into MultiMC and click 'OK'.
 3. Press 'Launch' and enjoy the game :)
 
 ### Download:
